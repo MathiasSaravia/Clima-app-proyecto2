@@ -1,6 +1,5 @@
 import { useClima } from "../hooks/useClima"
 import Formulario from "./Formulario"
-import Loading from "./Loading"
 import Resultado from "./Resultado"
 
 const AppClima = () => {
@@ -12,7 +11,7 @@ const AppClima = () => {
         <main className="dos-columnas">
          <Formulario />
          {
-          cargando ? <Loading /> 
+          cargando ? <p style={{ textAlign: 'center' , padding: '5px'}}>Cargando...</p> 
           : resultado.name ? <Resultado />
           : <p style={{ textAlign: 'center' , padding: '5px'}}>No hubo resultado</p>
          }
